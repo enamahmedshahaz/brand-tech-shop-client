@@ -1,9 +1,11 @@
+import Brands from "./Brands";
 
 
 const Home = () => {
     return (
         <div>
-            This is home
+            Banner section
+            <Brands></Brands>
         </div>
     );
 };

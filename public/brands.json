@@ -1,0 +1,38 @@
+[
+    {
+        "brand_id": 1,
+        "brand_name": "Apple",
+        "brand_image": "https://i.ibb.co/SPSgJS9/apple-175x175.png"
+    },
+    {
+        "brand_id": 2,
+        "brand_name": "Google",
+        "brand_image": "https://i.ibb.co/4WBVMfr/google-175x175.png"
+    },
+    {
+        "brand_id": 3,
+        "brand_name": "Microsoft",
+        "brand_image": "https://i.ibb.co/WpKxF47/microsoft-175x175.png"
+    },
+    {
+        "brand_id": 4,
+        "brand_name": "Xiaomi",
+        "brand_image": "https://i.ibb.co/Vp2psDm/mi-175x175.png"
+    },
+    {
+        "brand_id": 5,
+        "brand_name": "Realme",
+        "brand_image": "https://i.ibb.co/1nNc256/realme-175x175.png"
+       
+    },
+    {
+        "brand_id": 6,
+        "brand_name": "Huawei",
+        "brand_image": "https://i.ibb.co/25rSzkh/huawei-175x175.png"
+    },
+    {
+        "brand_id": 7,
+        "brand_name": "OnePlus",
+        "brand_image": "https://i.ibb.co/xzY9fJJ/oneplus1-175x175.png"
+    }
+]
