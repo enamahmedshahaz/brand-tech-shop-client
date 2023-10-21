@@ -6,10 +6,6 @@ const Product = ({ product }) => {
 
     const { _id, name, brandName, type, price, image, rating } = product;
 
-    const handleClickUpdate = (_id) => {
-        console.log('id:', _id);
-    };
-
     return (
 
         <div className="card w-96 bg-gray-100 shadow-xl">
@@ -22,9 +18,14 @@ const Product = ({ product }) => {
                 <p>Category: {type}, Brand: {brandName}</p>
                 <p>Price: {price} Tk</p>
                 <div className="card-actions">
-                    <Link to={`/products/${_id}`}><button className="btn btn-primary normal-case">View Details</button>
+
+                    <Link to={`/products/${_id}`}>
+                        <button className="btn btn-primary normal-case">View Details</button>
                     </Link>
-                    <button onClick={() => handleClickUpdate(_id)} className="btn btn-secondary normal-case">Update Product</button>
+
+                    <Link to={`/update/${_id}`}>
+                        <button className="btn btn-secondary normal-case">Update Product</button>
+                    </Link>
                 </div>
             </div>
         </div>

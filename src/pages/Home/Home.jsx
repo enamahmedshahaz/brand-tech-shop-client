@@ -1,11 +1,15 @@
+import { useLoaderData } from "react-router-dom";
 import Brands from "./Brands";
 
 
 const Home = () => {
+
+    const brands = useLoaderData();
+    
     return (
         <div>
             Banner section
-            <Brands></Brands>
+            <Brands brands={brands}></Brands>
         </div>
     );
 };
