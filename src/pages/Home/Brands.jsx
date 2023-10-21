@@ -15,7 +15,7 @@ const Brands = () => {
 
             <div className="flex gap-3 flex-wrap  justify-center">
                 {
-                    brands.map(brand => <Brand key={brand.brand_id} brand={brand}></Brand>)
+                    brands?.map(brand => <Brand key={brand.brand_id} brand={brand}></Brand>)
                 }
             </div>
 
