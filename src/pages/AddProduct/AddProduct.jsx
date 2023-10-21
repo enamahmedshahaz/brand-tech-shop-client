@@ -1,11 +1,11 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
 const AddProduct = () => {
 
     const handleAddProduct = event => {
         event.preventDefault();
-        
+
         const form = event.target;
 
         const name = form.name.value;
@@ -43,10 +43,7 @@ const AddProduct = () => {
             });
     }
 
-
-
-
-
+    
     return (
         <div>
             <div className="bg-white py-4 text-center mb-5">
@@ -67,8 +64,25 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
-                            <input type="text" name="brandName" placeholder="Enter brand name of the product" className="input input-bordered" required />
+
+                            {/* <input type="text" name="brandName" placeholder="Enter brand name of the product" className="input input-bordered" required /> */}
+
+                            <select name='brandName' className="select" required>
+                                <option disabled selected>Select a brand Name</option>
+                                <option>Apple</option>
+                                <option>Google</option>
+                                <option>Microsoft</option>
+                                <option>Xiaomi</option>
+                                <option>Realme</option>
+                                <option>Huawei</option>
+                                <option>OnePlus</option>
+                            </select>
+
                         </div>
+
+
+
+
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-5">

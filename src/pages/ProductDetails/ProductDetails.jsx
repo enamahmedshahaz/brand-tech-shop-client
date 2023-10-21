@@ -1,18 +1,40 @@
 
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ProductDetails = () => {
 
     const product = useLoaderData();
+
     const { _id, name, brandName, type, price, image, rating, description } = product;
 
     const handleAddToCart = (id) => {
         console.log('Cart item: ', id);
+
+        fetch("http://localhost:5000/cart", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(product),
+
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId || data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Added to cart successfully!',
+                        text: 'Click OK to continue',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
     };
 
     return (
         <div className='flex flex-col md:flex-row justify-center items-center'>
-            
+
             <div className='w-1/3 border-b-2 md:border-r-2 md:border-b-0 border-neutral-300 flex items-center justify-center'>
                 <img src={image} alt={`photo of ${name}`} />
             </div>
@@ -28,6 +50,7 @@ const ProductDetails = () => {
                 <button onClick={() => handleAddToCart(_id)} className='text-white btn btn-primary normal-case px-5 py-0'>Add to Cart</button>
                 <p className='text-gray-600'>{description}</p>
             </div>
+
         </div>
     );
 };
