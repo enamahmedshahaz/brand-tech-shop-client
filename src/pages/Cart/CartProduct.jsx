@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 
 const CartProduct = ({ cartProduct }) => {
-    
+
     const { _id, name, brandName, type, price, image, quantity } = cartProduct;
 
     const handleDeleteCartItem = (_id) => {
@@ -37,9 +37,7 @@ const CartProduct = ({ cartProduct }) => {
             }
         })
     };
-
     return (
-
         <div>
             <div className="bg-white w-3/4 rounded-lg shadow-md mb-5 mx-auto">
                 <div className="flex gap-5 items-center p-4">

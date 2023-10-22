@@ -12,7 +12,7 @@ const Cart = () => {
             <div className="bg-white py-4 text-center mb-5">
                 <h2 className="font-medium text-3xl text-teal-500">Cart Items {cartProducts.length > 0 && <p className="inline-block">: {cartProducts.length}</p>} </h2>
             </div>
-
+            
             <div className="p-10">
                 {cartProducts.length > 0 ?
                     <>

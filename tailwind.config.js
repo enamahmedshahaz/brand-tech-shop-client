@@ -5,10 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lora: "'Lora', serif", // Adds a new `font-lora` class
+        lato: "'Lato', sans-serif",
+      },
+    },
   },
   plugins: [require("daisyui")],
-  
+
   daisyui: {
     themes: ['light'],
   }
