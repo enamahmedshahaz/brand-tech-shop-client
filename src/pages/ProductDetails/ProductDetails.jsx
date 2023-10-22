@@ -6,10 +6,9 @@ const ProductDetails = () => {
 
     const product = useLoaderData();
 
-    const { _id, name, brandName, type, price, image, rating, description } = product;
+    const {_id, name, brandName, type, price, image, rating, description } = product;
 
-    const handleAddToCart = (id) => {
-        console.log('Cart item: ', id);
+    const handleAddToCart = () => {
 
         fetch("http://localhost:5000/cart", {
             method: "POST",
@@ -47,7 +46,7 @@ const ProductDetails = () => {
                     <span className='italic'> made by </span>
                     <span className='font-semibold'>{brandName}</span> </div>
                 <p className='font-bold text-xl text-amber-900'>${price}</p>
-                <button onClick={() => handleAddToCart(_id)} className='text-white btn btn-primary normal-case px-5 py-0'>Add to Cart</button>
+                <button onClick={handleAddToCart} className='text-white btn btn-primary normal-case px-5 py-0'>Add to Cart</button>
                 <p className='text-gray-600'>{description}</p>
             </div>
 
