@@ -11,7 +11,7 @@ const UpdateProduct = () => {
         event.preventDefault();
 
         const form = event.target;
-        
+
         const name = form.name.value;
         const brandName = form.brandName.value;
         const type = form.type.value;
@@ -33,6 +33,7 @@ const UpdateProduct = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
+                    
                     Swal.fire({
                         title: 'Update Success!',
                         text: 'Click OK to continue',
