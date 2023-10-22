@@ -4,7 +4,6 @@ import Product from "./Product";
 const Products = () => {
 
     const products = useLoaderData();
-
     return (
         <div className="h-screen py-5 my-auto">
             {products.length > 0 ?
