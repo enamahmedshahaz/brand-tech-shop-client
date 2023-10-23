@@ -8,7 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
 
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, loginWithGoogle } = useContext(AuthContext);
 
 
     const handleClickLogin = (e) => {
@@ -33,7 +33,15 @@ const Login = () => {
     }
 
     const handleGoogleLogin = () => {
-        
+        loginWithGoogle()
+            .then(result => {
+                console.log(result.user);
+                toast.success("Login with Google successful");
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error(error.message);
+            })
     }
 
     return (
