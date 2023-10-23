@@ -1,10 +1,14 @@
 
+import { useContext } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+
 
 
 const Register = () => {
 
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleClickRegister = (e) => {
 
@@ -46,6 +50,24 @@ const Register = () => {
             return;
         }
 
+        createUser(email, password)
+        .then( user => {
+            console.log(user);
+
+            updateUserProfile(name, photoUrl)
+                .then(() => {
+                    console.log('Profile update successful');
+                }).catch((error) => {
+                    console.error(error);
+                });
+            toast.success("Registration successful");
+            // clear all input values in the form
+            e.target.reset();
+        })
+        .catch(error => {
+            console.error(error);
+            toast.error(error.message);
+        });
     }
 
     return (
