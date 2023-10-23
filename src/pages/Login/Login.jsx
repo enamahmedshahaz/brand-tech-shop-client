@@ -1,9 +1,15 @@
 
 import { Link } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Login = () => {
+
+    const { signInUser } = useContext(AuthContext);
+
 
     const handleClickLogin = (e) => {
         e.preventDefault();
@@ -11,15 +17,31 @@ const Login = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
+
+        signInUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success("Login successful");
+                // clear all input values in the form
+                e.target.reset();
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error(error.message);
+            })
+
     }
 
     const handleGoogleLogin = () => {
         
     }
 
-
     return (
         <div className="hero min-h-screen">
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
 
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
