@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2';
 
@@ -6,6 +8,13 @@ const UpdateProduct = () => {
     const product = useLoaderData();
 
     const { _id, name, brandName, type, price, image, rating, description } = product;
+
+    const [selectedBrand, setSelectedBrand] = useState(brandName);
+
+    const handleSelectOptionChange = (e) => {
+        const currentSelectedOption = e.target.value;
+        setSelectedBrand(currentSelectedOption);
+    }
 
     const handleUpdateProduct = (event) => {
         event.preventDefault();
@@ -33,7 +42,7 @@ const UpdateProduct = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    
+
                     Swal.fire({
                         title: 'Update Success!',
                         text: 'Click OK to continue',
@@ -45,8 +54,10 @@ const UpdateProduct = () => {
             });
     }
 
-    return (
 
+
+
+    return (
         <div className="mb-24">
             <div className="py-4 text-center mb-5">
                 <h2 className="font-medium text-6xl text-gray-600">Update Product Info</h2>
@@ -66,7 +77,22 @@ const UpdateProduct = () => {
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
-                            <input type="text" name="brandName" defaultValue={brandName} placeholder="Enter brand name of the product" className="input input-bordered" required />
+
+                            <select
+                                className="input input-bordered"
+                                name='brandName'
+                                defaultValue={selectedBrand}
+                                onChange={handleSelectOptionChange}
+                                required={true} >
+                                <option disabled>Select a brand name</option>
+                                <option value={"Apple"}>Apple</option>
+                                <option value={"Google"}>Google</option>
+                                <option value={"Microsoft"}>Microsoft</option>
+                                <option value={"Xiaomi"}>Xiaomi</option>
+                                <option value={"Realme"}>Realme</option>
+                                <option value={"Huawei"}>Huawei</option>
+                            </select>
+
                         </div>
                     </div>
 

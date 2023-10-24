@@ -1,17 +1,20 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Product from "./Product";
+import Advertisement from "./Advertisement";
 
 const Products = () => {
 
     const products = useLoaderData();
 
-    const {brandName} = useParams();
+    const { brandName } = useParams();
 
     return (
-        <div className="h-screen py-5 my-auto">
+        <div className="py-5 my-auto">
 
             {products.length > 0 ?
                 <>
+                    <Advertisement></Advertisement>
+                    
                     <div className="py-4 text-center mb-5 ">
                         <h2 className="font-medium text-6xl text-gray-600"> <span className="font-bold">{brandName}</span>   Products</h2>
                     </div>

@@ -43,7 +43,7 @@ const AddProduct = () => {
             });
     }
 
-    
+
     return (
         <div className='mb-24'>
             <div className="py-4 text-center mb-5">
@@ -65,17 +65,17 @@ const AddProduct = () => {
                                 <span className="label-text">Brand Name</span>
                             </label>
 
-                            {/* <input type="text" name="brandName" placeholder="Enter brand name of the product" className="input input-bordered" required /> */}
-
-                            <select name='brandName' className="select" required>
-                                <option disabled selected>Select a brand Name</option>
-                                <option>Apple</option>
-                                <option>Google</option>
-                                <option>Microsoft</option>
-                                <option>Xiaomi</option>
-                                <option>Realme</option>
-                                <option>Huawei</option>
-                                <option>OnePlus</option>
+                            <select
+                                className="input input-bordered"
+                                name='brandName'
+                                required={true}>
+                                <option disabled>Select a brand name</option>
+                                <option value={"Apple"}>Apple</option>
+                                <option value={"Google"}>Google</option>
+                                <option value={"Microsoft"}>Microsoft</option>
+                                <option value={"Xiaomi"}>Xiaomi</option>
+                                <option value={"Realme"}>Realme</option>
+                                <option value={"Huawei"}>Huawei</option>
                             </select>
 
                         </div>
