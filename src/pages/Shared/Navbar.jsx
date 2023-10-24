@@ -60,7 +60,7 @@ const Navbar = () => {
                     user &&
                     <>
                         <div className="flex gap-1 justify-center items-center">
-                            
+
                             <div className="avatar m-2">
                                 <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={user.photoURL} />
@@ -76,8 +76,10 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div>
-                                <button onClick={handleClickLogout} className="px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-red-600 border-red-600 hover:text-white hover:bg-red-600 active:bg-red-700 focus:ring-red-300" >Logout</button>
-
+                                <button onClick={handleClickLogout}
+                                    className="px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-red-600 border-red-600 hover:text-white hover:bg-red-600 active:bg-red-700 focus:ring-red-300" >
+                                    Logout
+                                </button>
                             </div>
                         </div>
                     </>

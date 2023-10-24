@@ -9,6 +9,7 @@ import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/add-product",
-                element: <AddProduct></AddProduct>,
+                element: <PrivateRoutes> <AddProduct></AddProduct> </PrivateRoutes>,
             },
             {
                 path: "/products/brands/:brandName",
@@ -40,17 +41,17 @@ const router = createBrowserRouter([
             },
             {
                 path: "/products/:id",
-                element: <ProductDetails></ProductDetails>,
+                element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
             },
             {
                 path: "/update/:id",
-                element: <UpdateProduct />,
+                element: <PrivateRoutes> <UpdateProduct></UpdateProduct> </PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
             },
             {
                 path: "/cart",
-                element: <Cart></Cart>,
+                element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/cart'),
             },
         ],
