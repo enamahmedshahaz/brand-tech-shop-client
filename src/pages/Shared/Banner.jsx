@@ -4,9 +4,9 @@ const Banner = () => {
             <div className="hero min-h-fit bg-base-200">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
-                        <h1 className="text-6xl text-gray-600 font-medium">Hello there</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <h1 className="text-5xl text-gray-600 font-medium">Welcome to <br /> Brand Tech Shop</h1>
+                        <p className="py-6">Your Tech Wonderland! Explore the latest mobiles, laptops, and more from top brands. Shop confidently with us for innovation and unbeatable deals.
+                        </p>
                     </div>
                 </div>
             </div>

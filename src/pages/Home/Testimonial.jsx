@@ -12,12 +12,13 @@ const Testimonial = () => {
                             <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
                                 className="w-32 rounded-full shadow-lg dark:shadow-black/20" />
                         </div>
-                        <h5 className="mb-2 text-lg font-bold">Sarah Johnson</h5>
+                        <h5 className="mb-2 text-lg font-bold">Olivia Clark</h5>
                         <h6 className="mb-4 font-medium text-primary dark:text-primary-400">
                             Marketing Manager
                         </h6>
                         <p className="mb-4">
-                            I cannot express how grateful I am to the team at your wedding event management. They made my special day truly magical. From the stunning decorations to the impeccable planning, everything was beyond perfection. I highly recommend their services!
+                        I love the wide selection of tech products on this site. Found my dream iPhone from Apple at a great price. Fast shipping too!
+
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block w-6">
                                 <path fill="currentColor"
                                     d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
@@ -66,7 +67,8 @@ const Testimonial = () => {
                             Graphic Designer
                         </h6>
                         <p className="mb-4">
-                            The floral arrangements created by your team were simply breathtaking. They added a touch of elegance and romance to our wedding. I was thrilled with the personalized service and the beautiful bouquets. I could not have asked for more.
+                        Impressed with the quality of Xiaomi products. Quick and reliable service. A go-to store for all my tech needs!
+
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block w-6">
                                 <path fill="currentColor"
                                     d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
@@ -110,12 +112,12 @@ const Testimonial = () => {
                             <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
                                 className="w-32 rounded-full shadow-lg dark:shadow-black/20" />
                         </div>
-                        <h5 className="mb-2 text-lg font-bold">David Smith</h5>
+                        <h5 className="mb-2 text-lg font-bold">Liam Anderson</h5>
                         <h6 className="mb-4 font-medium text-primary dark:text-primary-400">
                             Software Engineer
                         </h6>
                         <p className="mb-4">
-                            As a meticulous person, I had high expectations for my wedding day. Your event planning team not only met but exceeded all of them. The attention to detail and flawless execution left me and my spouse in awe. Thank you for making our day unforgettable!
+                        Amazing range of tech gadgets! I got a Microsoft Surface and it's been a game-changer for my work. Highly recommend!
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" className="inline-block w-6">
                                 <path fill="currentColor"
                                     d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
