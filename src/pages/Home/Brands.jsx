@@ -1,16 +1,17 @@
 
 import Brand from "./Brand";
+import PropTypes from 'prop-types';
 
 
 const Brands = ({brands}) => {
 
     return (
         <div>
-            <div className="bg-white py-4 text-center mb-5">
-                <h2 className="font-medium text-3xl text-teal-500">Here is our world renowned brands, original products with authentic price</h2>
+            <div className="py-4 text-center mb-5">
+                <h2 className="font-medium text-6xl text-gray-600">Our Brands</h2>
             </div>
-
-            <div className="flex gap-3 flex-wrap  justify-center">
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                 {
                     brands.map(brand => <Brand key={brand.brand_id} brand={brand}></Brand>)
                 }
@@ -21,3 +22,7 @@ const Brands = ({brands}) => {
 };
 
 export default Brands;
+
+Brands.propTypes = {
+    brands: PropTypes.array
+}

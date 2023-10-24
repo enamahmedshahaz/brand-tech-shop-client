@@ -7,7 +7,7 @@ const Root = () => {
     return (
         <div className='font-raleway'>
             <Navbar></Navbar>
-            <div className='max-w-[1200px] bg-base-200 mx-auto'>
+            <div className='max-w-[1200px] mx-auto'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -6,25 +6,27 @@ const Product = ({ product }) => {
     const { _id, name, brandName, type, price, image, rating } = product;
 
     return (
-
-        <div className="card w-96 bg-gray-100 shadow-xl">
+        <div className="card w-72 shadow-lg">
             <figure className="px-10 pt-10">
-                <img src={image} alt={`image of ${name}`} className="w-3/4 rounded-xl border-2 border-indigo-500" />
+                <img src={image} alt={`image of ${name}`} className="w-auto rounded-lg border border-gray-200" />
             </figure>
-            <div className="card-body items-center text-center flex flex-1">
+
+            <div className="card-body items-center text-center flex">
                 <h2 className="card-title">{name}</h2>
                 <p>Rating: {rating}/5</p>
-                <p>Category: {type}, Brand: {brandName}</p>
+                <p>Category: {type}</p>
+                <p>Brand: {brandName}</p>
                 <p>Price: {price} Tk</p>
+                
                 <div className="card-actions">
-
-                    <Link to={`/products/${_id}`}>
-                        <button className="btn btn-primary normal-case">View Details</button>
-                    </Link>
-
-                    <Link to={`/update/${_id}`}>
-                        <button className="btn btn-secondary normal-case">Update Product</button>
-                    </Link>
+                    <div className='flex flex-col md:flex-row gap-2 justify-center'>
+                        <Link to={`/products/${_id}`}>
+                            <button className="btn btn-primary normal-case">View Details</button>
+                        </Link>
+                        <Link to={`/update/${_id}`}>
+                            <button className="btn btn-secondary normal-case">Update Product</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -29,10 +29,5 @@
         "brand_id": 6,
         "brand_name": "Huawei",
         "brand_image": "https://i.ibb.co/25rSzkh/huawei-175x175.png"
-    },
-    {
-        "brand_id": 7,
-        "brand_name": "OnePlus",
-        "brand_image": "https://i.ibb.co/xzY9fJJ/oneplus1-175x175.png"
     }
 ]
