@@ -3,8 +3,6 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
-
   ],
   theme: {
     extend: {
@@ -15,13 +13,12 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui"), require("tw-elements/dist/plugin.cjs")],
+  plugins: [require("daisyui")],
 
   daisyui: {
-    themes: ['light'],
+    themes: ["light", "dark"],
   },
-  darkMode: "class"
-
 
 }
+
 

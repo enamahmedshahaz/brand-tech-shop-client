@@ -12,8 +12,8 @@ const Products = () => {
 
             {products.length > 0 ?
                 <>
-                    <div className="py-4 text-center border  mb-5 ">
-                        <h2 className="font-medium text-6xl text-gray-600"> {brandName}  Products</h2>
+                    <div className="py-4 text-center mb-5 ">
+                        <h2 className="font-medium text-6xl text-gray-600"> <span className="font-bold">{brandName}</span>   Products</h2>
                     </div>
 
                     <div className="flex gap-3 flex-wrap justify-center items-center">

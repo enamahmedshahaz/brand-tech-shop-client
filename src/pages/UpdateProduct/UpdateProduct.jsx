@@ -47,9 +47,9 @@ const UpdateProduct = () => {
 
     return (
 
-        <div>
-            <div className="bg-white py-4 text-center mb-5">
-                <h2 className="font-medium text-3xl text-teal-500">Update Product Information</h2>
+        <div className="mb-24">
+            <div className="py-4 text-center mb-5">
+                <h2 className="font-medium text-6xl text-gray-600">Update Product Info</h2>
             </div>
 
             <div>
@@ -112,7 +112,7 @@ const UpdateProduct = () => {
                     </div>
 
                     <div className="form-control mt-6">
-                        <input className="text-white text-xl btn btn-primary normal-case bg-orange-300"
+                        <input className="text-white text-xl btn btn-primary normal-case"
                             type="submit"
                             value="Update Product" />
                     </div>

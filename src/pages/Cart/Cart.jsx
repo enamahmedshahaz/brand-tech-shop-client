@@ -9,8 +9,8 @@ const Cart = () => {
 
     return (
         <div>
-            <div className="bg-white py-4 text-center mb-5">
-                <h2 className="font-medium text-3xl text-teal-500">Cart Items {cartProducts.length > 0 && <p className="inline-block">: {cartProducts.length}</p>} </h2>
+            <div className="py-4 text-center mb-5">
+                <h2 className="font-medium text-6xl text-gray-600">Cart Items {cartProducts.length > 0 && <p className="inline-block">: {cartProducts.length}</p>} </h2>
             </div>
             
             <div className="p-10">
@@ -50,11 +50,9 @@ const Cart = () => {
                         </div>
                     </>
                     :
-
-                    <div className="bg-white p-4 rounded-lg w-1/2 mx-auto shadow-sm">
-                        <p className="text-2xl text-red-500 font-semibold text-center">
-                            Sorry! Your cart is empty!
-                        </p>
+                    <div className="py-10 w-2/3 rounded-lg mx-auto mt-5 shadow-md shadow-red-400">
+                        <p className="text-6xl text-red-600 font-medium text-center">
+                            Sorry! Your cart is empty!</p>
                     </div>
                 }
             </div>
