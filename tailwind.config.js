@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         lora: "'Lora', serif", // Adds a new `font-lora` class
-        lato: "'Lato', sans-serif",
+        raleway: "'Raleway', sans-serif", // Adds a new `font-raleway` class
+
       },
     },
   },

@@ -1,17 +1,43 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Navbar = () => {
+
+    const { user, signOutUser } = useContext(AuthContext);
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink> </li>
         <li><NavLink to="/add-product">Add Product</NavLink> </li>
         <li><NavLink to="/cart">My Cart</NavLink> </li>
-        <li><NavLink to="/login">Login</NavLink></li>
+        {
+            !user &&
+            <>
+                <li> <NavLink to="/login">Login</NavLink> </li>
+            </>
+        }
     </>
+
+    const handleClickLogout = () => {
+        signOutUser()
+            .then(() => {
+                toast.success(" Sign-out successful");
+            })
+            .catch(error => {
+                toast.error(error);
+            });
+    }
 
     return (
         <div className="navbar bg-base-100">
+
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +55,34 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+
+                {
+                    user &&
+                    <>
+                        <div className="flex gap-1 justify-center items-center">
+                            
+                            <div className="avatar m-2">
+                                <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <div>
+                                    <p className="font-bold"> Hello,  <span className="text-sm font-semibold text-gray-700">{user.displayName}</span> </p>
+                                </div>
+                                <div>
+                                    <p className="text-sm font-semibold text-gray-700">{user.email}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button onClick={handleClickLogout} className="px-4 py-2 rounded-md text-sm font-medium border focus:outline-none focus:ring transition text-red-600 border-red-600 hover:text-white hover:bg-red-600 active:bg-red-700 focus:ring-red-300" >Logout</button>
+
+                            </div>
+                        </div>
+                    </>
+                }
+
             </div>
         </div>
     );
