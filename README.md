@@ -2,7 +2,7 @@
 
 ##  Project Live Link
 
-Click to view live: [...](...)
+Click to view live: [https://b8a10-brand-shop-6e4df.web.app/](https://b8a10-brand-shop-6e4df.web.app/)
 
 
 ##  Technology used
