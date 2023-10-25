@@ -1,26 +1,31 @@
 import { useLoaderData } from "react-router-dom";
 import CartProduct from "./CartProduct";
+import { useState } from "react";
 
 const Cart = () => {
 
-    const cartProducts = useLoaderData();
+    const loadedCartProducts = useLoaderData();
     let subTotal = 0;
     const shippingCost = 250;
+
+    const [cartProducts, setCartProducts] = useState(loadedCartProducts);
 
     return (
         <div>
             <div className="py-4 text-center mb-5">
                 <h2 className="font-medium text-6xl text-gray-600">Cart Items {cartProducts.length > 0 && <p className="inline-block">: {cartProducts.length}</p>} </h2>
             </div>
-            
+
             <div className="p-10">
-                
+
                 {cartProducts.length > 0 ?
                     <>
                         {
                             cartProducts?.map(aProduct => <CartProduct
                                 key={aProduct._id}
-                                cartProduct={aProduct} >
+                                cartProduct={aProduct}
+                                cartProducts={cartProducts}
+                                setCartProducts={setCartProducts} >
                             </CartProduct>)
                         }
 

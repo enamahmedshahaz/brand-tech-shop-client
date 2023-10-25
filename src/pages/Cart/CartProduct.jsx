@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 
-const CartProduct = ({ cartProduct }) => {
+const CartProduct = ({ cartProduct, cartProducts, setCartProducts }) => {
 
     const { _id, name, brandName, type, price, image, quantity } = cartProduct;
 
@@ -26,6 +26,10 @@ const CartProduct = ({ cartProduct }) => {
                     .then(data => {
                         console.log(data);
                         if (data.deletedCount > 0) {
+                             
+                            const remaining = cartProducts.filter(cartProduct => cartProduct._id !== _id);
+                            setCartProducts(remaining);
+
                             Swal.fire(
                                 'Removed!',
                                 'The item is removed.',
@@ -64,7 +68,7 @@ const CartProduct = ({ cartProduct }) => {
                             </p>
                         </div>
                     </div>
-                    
+
                     <div>
                         <button onClick={() => handleDeleteCartItem(_id)} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                             Remove item
@@ -80,5 +84,7 @@ const CartProduct = ({ cartProduct }) => {
 export default CartProduct;
 
 CartProduct.propTypes = {
-    cartProduct: PropTypes.object
+    cartProduct: PropTypes.object,
+    cartProducts: PropTypes.array,
+    setCartProducts: PropTypes.func,
 }

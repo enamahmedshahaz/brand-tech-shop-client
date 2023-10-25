@@ -6,7 +6,6 @@ const Brand = ({ brand }) => {
     const { brand_name, brand_image } = brand;
 
     return (
-
         <Link to={`/products/brands/${brand_name}`}>
             <div className='p-1 hover:cursor-pointer hover:border-2 rounded-md'>
                 <div>
@@ -17,7 +16,6 @@ const Brand = ({ brand }) => {
                 </div>
             </div>
         </Link>
-
     );
 };
 

@@ -4,8 +4,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
-
-
 const Register = () => {
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -72,7 +70,7 @@ const Register = () => {
 
     return (
 
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen">
 
             <Toaster
                 position="top-right"
