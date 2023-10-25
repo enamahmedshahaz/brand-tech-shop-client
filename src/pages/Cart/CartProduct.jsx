@@ -19,7 +19,7 @@ const CartProduct = ({ cartProduct }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 //---------call delete api-----------//
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/cart/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

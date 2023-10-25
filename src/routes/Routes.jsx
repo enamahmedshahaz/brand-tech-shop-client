@@ -37,22 +37,22 @@ const router = createBrowserRouter([
             {
                 path: "/products/brands/:brandName",
                 element: <Products></Products>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/brands/${params.brandName}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/products/brands/${params.brandName}`)
             },
             {
                 path: "/products/:id",
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/products/${params.id}`),
             },
             {
                 path: "/update/:id",
                 element: <PrivateRoutes> <UpdateProduct></UpdateProduct> </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/products/${params.id}`),
             },
             {
                 path: "/cart",
                 element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/cart'),
+                loader: () => fetch('https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/cart'),
             },
         ],
     },
