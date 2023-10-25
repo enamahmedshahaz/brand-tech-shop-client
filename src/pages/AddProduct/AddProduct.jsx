@@ -18,7 +18,7 @@ const AddProduct = () => {
 
         const newProduct = { name, brandName, type, price, image, rating, description }
 
-        console.log('New Product: ', newProduct);
+        // console.log('New Product: ', newProduct);
 
         fetch("https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/products", {
             method: "POST",

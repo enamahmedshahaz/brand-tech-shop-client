@@ -10,7 +10,7 @@ const Login = () => {
 
     const { signInUser, loginWithGoogle } = useContext(AuthContext);
     const location = useLocation();
-    console.log('Location in login: ', location);
+   // console.log('Location in login: ', location);
     const navigate = useNavigate();
 
     const handleClickLogin = (e) => {

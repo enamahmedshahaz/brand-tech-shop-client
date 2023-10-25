@@ -9,7 +9,7 @@ const PrivateRoutes = ({ children }) => {
 
     const location = useLocation();
     
-    console.log('Location in PrivateRoute- ', location);
+   // console.log('Location in PrivateRoute- ', location);
 
     if (loading) {
         return <span className="loading loading-spinner loading-lg"></span>;
