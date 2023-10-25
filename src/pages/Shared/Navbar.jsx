@@ -112,7 +112,7 @@ const Navbar = () => {
 
                             <div className="hidden md:flex flex-col items-center">
                                 <div>
-                                    <p className="font-bold"> Hello, <span className="text-sm font-semibold text-gray-700">{user.displayName}</span> </p>
+                                    <p className="font-bold"> Hello, <span className="text-sm font-semibold text-gray-500">{user.displayName}</span> </p>
                                 </div>
                                 {/* <div>
                                     <p className="text-sm font-semibold text-gray-700">{user.email}</p>

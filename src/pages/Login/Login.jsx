@@ -23,13 +23,13 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                
+
                 // clear all input values in the form
                 e.target.reset();
-                
+
                 //if comes from a private route navigate to that route, 
                 // else navigate to home page after successful login
-                navigate(location?.state? location.state : '/');
+                navigate(location?.state ? location.state : '/');
                 toast.success("Login successful");
             })
             .catch(error => {
@@ -43,7 +43,7 @@ const Login = () => {
         loginWithGoogle()
             .then(result => {
                 console.log(result.user);
-                navigate(location?.state? location.state : '/');
+                navigate(location?.state ? location.state : '/');
                 toast.success("Login with Google successful");
             })
             .catch(error => {
@@ -61,7 +61,12 @@ const Login = () => {
 
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-3xl font-bold">Login now!</h1>
+                    {
+
+                        location?.state
+                            ? <h1 className="text-3xl text-red-500 font-bold">Please Login first!</h1>
+                            : <h1 className="text-3xl font-bold">Login now!</h1>
+                    }
                 </div>
 
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

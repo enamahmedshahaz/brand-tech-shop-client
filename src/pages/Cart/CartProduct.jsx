@@ -39,7 +39,7 @@ const CartProduct = ({ cartProduct }) => {
     };
     return (
         <div>
-            <div className="bg-white w-fit rounded-lg shadow-md mb-5 mx-auto">
+            <div className="dark:border w-fit rounded-lg shadow-md mb-5 mx-auto">
 
                 <div className="flex flex-col md:flex-row gap-5 items-center p-2">
                     <div>
@@ -47,8 +47,8 @@ const CartProduct = ({ cartProduct }) => {
                     </div>
 
                     <div>
-                        <h2 className="text-lg font-bold text-gray-900">{name}</h2>
-                        <p className="mt-1 text-xs text-gray-700">{type} made by {brandName}</p>
+                        <h2 className="text-lg font-bold text-gray-500">{name}</h2>
+                        <p className="mt-1 text-sm text-gray-600">{type} made by {brandName}</p>
                     </div>
 
                     <div className=''>

@@ -45,7 +45,7 @@ const ProductDetails = () => {
                     <span className='font-semibold'>{type}</span>
                     <span className='italic'> made by </span>
                     <span className='font-semibold'>{brandName}</span> </div>
-                <p className='font-bold text-xl text-amber-900'>${price}</p>
+                <p className='font-bold text-xl text-amber-900'>TK {price}</p>
                 <button onClick={handleAddToCart} className='text-white btn btn-primary normal-case px-5 py-0'>Add to Cart</button>
                 <p className='text-gray-600'>{description}</p>
             </div>
