@@ -20,7 +20,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/brands.json'),
+                loader: () => fetch('https://b8a10-brandshop-server-side-enamahmedshahaz.vercel.app/brands'),
             },
             {
                 path: "/login",
