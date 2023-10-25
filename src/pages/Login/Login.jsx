@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -9,7 +9,9 @@ import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
 
     const { signInUser, loginWithGoogle } = useContext(AuthContext);
-
+    const location = useLocation();
+    console.log('Location in login: ', location);
+    const navigate = useNavigate();
 
     const handleClickLogin = (e) => {
         e.preventDefault();
@@ -21,9 +23,14 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success("Login successful");
+                
                 // clear all input values in the form
                 e.target.reset();
+                
+                //if comes from a private route navigate to that route, 
+                // else navigate to home page after successful login
+                navigate(location?.state? location.state : '/');
+                toast.success("Login successful");
             })
             .catch(error => {
                 console.log(error);
@@ -36,6 +43,7 @@ const Login = () => {
         loginWithGoogle()
             .then(result => {
                 console.log(result.user);
+                navigate(location?.state? location.state : '/');
                 toast.success("Login with Google successful");
             })
             .catch(error => {
