@@ -9,12 +9,12 @@ const UpdateProduct = () => {
 
     const { _id, name, brandName, type, price, image, rating, description } = product;
 
-    const [selectedBrand, setSelectedBrand] = useState(brandName);
+    // const [selectedBrand, setSelectedBrand] = useState(brandName);
 
-    const handleSelectOptionChange = (e) => {
-        const currentSelectedOption = e.target.value;
-        setSelectedBrand(currentSelectedOption);
-    }
+    // const handleSelectOptionChange = (e) => {
+    //     const currentSelectedOption = e.target.value;
+    //     setSelectedBrand(currentSelectedOption);
+    // }
 
     const handleUpdateProduct = (event) => {
         event.preventDefault();
@@ -42,14 +42,12 @@ const UpdateProduct = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-
                     Swal.fire({
                         title: 'Update Success!',
                         text: 'Click OK to continue',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     });
-                    form.reset();
                 }
             });
     }
@@ -81,8 +79,8 @@ const UpdateProduct = () => {
                             <select
                                 className="input input-bordered"
                                 name='brandName'
-                                defaultValue={selectedBrand}
-                                onChange={handleSelectOptionChange}
+                                defaultValue={brandName}
+                                //onChange={handleSelectOptionChange}
                                 required={true} >
                                 <option disabled>Select a brand name</option>
                                 <option value={"Apple"}>Apple</option>

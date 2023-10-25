@@ -39,8 +39,9 @@ const CartProduct = ({ cartProduct }) => {
     };
     return (
         <div>
-            <div className="bg-white w-3/4 rounded-lg shadow-md mb-5 mx-auto">
-                <div className="flex gap-5 items-center p-4">
+            <div className="bg-white w-fit rounded-lg shadow-md mb-5 mx-auto">
+
+                <div className="flex flex-col md:flex-row gap-5 items-center p-2">
                     <div>
                         <img alt="product-image" className="w-full rounded-lg sm:w-40" src={image} />
                     </div>
@@ -49,16 +50,21 @@ const CartProduct = ({ cartProduct }) => {
                         <h2 className="text-lg font-bold text-gray-900">{name}</h2>
                         <p className="mt-1 text-xs text-gray-700">{type} made by {brandName}</p>
                     </div>
-                    <div>
-                        <p className='text-sm'>TK {price}</p>
+
+                    <div className=''>
+                        <div>
+                            <p className='text-sm'>TK {price}</p>
+                        </div>
+                        <div>
+                            <p className='text-sm text-right'> x {quantity}</p>
+                        </div>
+                        <hr className="h-px  bg-gray-200 border-0 dark:bg-gray-700" />
+                        <div>
+                            <p className='text-sm'> TK {parseFloat(price) * quantity}
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <p className='text-sm'>x {quantity}=</p>
-                    </div>
-                    <div>
-                        <p className='text-sm'> TK {parseFloat(price) * quantity}
-                        </p>
-                    </div>
+                    
                     <div>
                         <button onClick={() => handleDeleteCartItem(_id)} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                             Remove item

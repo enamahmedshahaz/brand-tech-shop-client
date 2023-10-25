@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Brands = ({brands}) => {
 
     return (
-        <div>
+        <div className="">
             <div className="py-4 text-center mb-5">
                 <h2 className="font-medium text-6xl text-gray-600">Our Brands</h2>
             </div>

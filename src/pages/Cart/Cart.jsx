@@ -14,6 +14,7 @@ const Cart = () => {
             </div>
             
             <div className="p-10">
+                
                 {cartProducts.length > 0 ?
                     <>
                         {
